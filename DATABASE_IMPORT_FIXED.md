@@ -83,7 +83,7 @@ CREATE TABLE IF NOT EXISTS practicantes (
     password VARCHAR(255) NOT NULL,
     email VARCHAR(100),
     foto VARCHAR(255) DEFAULT 'default-avatar.png',
-    horario JSON NULL,
+    horario TEXT NULL,
     periodo_inicio DATE NULL,
     periodo_fin DATE NULL,
     activo BOOLEAN DEFAULT TRUE,
