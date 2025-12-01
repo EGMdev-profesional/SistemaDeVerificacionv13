@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: asistencia-qr-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: DB_HOST
+        scope: build,runtime
+      - key: DB_USER
+        scope: build,runtime
+      - key: DB_PASSWORD
+        scope: build,runtime
+      - key: DB_NAME
+        scope: build,runtime
+      - key: DB_PORT
+        value: 3306
+      - key: JWT_SECRET
+        scope: build,runtime
+      - key: HORA_ENTRADA
+        value: "08:00:00"
+      - key: HORA_SALIDA
+        value: "13:00:00"
